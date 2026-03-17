@@ -2,7 +2,7 @@
 # LLM Security Mini Gateway
 
 This project is a simple security layer for Large Language Models (LLMs).  
-It checks user input before sending it to the model to make sure it is safe.
+It checks user input before sending it to the model to make sure it is safe from attacks such as jailbreak, prompt injection detection etc
 
 ---
 
