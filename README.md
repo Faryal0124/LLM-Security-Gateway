@@ -18,11 +18,12 @@ It checks user input before sending it to the model to make sure it is safe from
 
 ## How it works
 
-1. The system checks the input for injection attacks  
-2. If injection score is high → BLOCK  
-3. If safe, then it checks for PII  
-4. If PII found → MASK  
-5. Otherwise → ALLOW  
+1. The system checks the input for injection attacks and calculates a score  
+2. It also checks the input for PII (phone numbers, emails, API keys)  
+3. Both results are sent to the policy decision engine  
+4. If injection score ≥ threshold → BLOCK  
+5. If PII is detected → MASK  
+6. Otherwise → ALLOW
 
 ---
 
